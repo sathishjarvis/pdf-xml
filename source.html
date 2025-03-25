@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to XML Converter</title>
+    <link rel="stylesheet" href="source.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PDF to XML Converter</h1>
+        <div class="upload-area" id="dropArea">
+            <input type="file" id="fileInput" accept=".pdf">
+            <label for="fileInput" class="upload-label">
+                <span class="drag-text">Drag & Drop PDF File Here</span>
+                <span class="browse-text">or Browse Files</span>
+            </label>
+        </div>
+        <div class="options">
+            <label>
+                <input type="checkbox" id="preserveLayout" checked>
+                Preserve Layout Structure
+            </label>
+            <label>
+                <input type="checkbox" id="extractTables">
+                Extract Tables
+            </label>
+        </div>
+        <button id="convertBtn">Convert to XML</button>
+        <div class="output-area" id="outputArea" style="display: none;">
+            <h2>XML Output</h2>
+            <pre id="xmlOutput"></pre>
+            <button id="downloadBtn">Download XML</button>
+            <button id="copyBtn">Copy to Clipboard</button>
+        </div>
+        <div class="status" id="status"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script src="./source.js"></script>
+</body>
+</html>
